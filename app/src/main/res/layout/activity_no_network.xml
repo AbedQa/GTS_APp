@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
+
+        <TextView
+            android:id="@+id/no_internet_txt"
+            android:layout_below="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+android:textSize="20dp"
+            android:textColor="@color/white"
+            android:text="Internet Connection is not available"/>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_below="@+id/no_internet_txt"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sign_in_b"
+            android:textColor="@color/white"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginTop="60dp"
+            android:text="Enable Internet"/>
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_below="@+id/btn"
+            android:background="@drawable/sign_in_b"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginTop="60dp"
+            android:text="Tap to refresh"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

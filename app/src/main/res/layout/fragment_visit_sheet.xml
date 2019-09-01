@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/check_box_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp">
+
+        <CheckBox
+            android:id="@+id/VisitSheetNotStartedCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="checkboxfilter"
+            android:text="Not Started"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/VisitSheetDefferdCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/VisitSheetNotStartedCB"
+            android:checked="false"
+
+            android:onClick="checkboxfilter"
+            android:text="Deferred"
+            android:textColor="@color/white"
+
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/VisitSheetWaitingForDeliverCB"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/VisitSheetDefferdCB"
+            android:checked="false"
+
+            android:onClick="checkboxfilter"
+            android:text="Waiting For Deliver"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/VisitSheetCancelledCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/VisitSheetWaitingForDeliverCB"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+
+            android:text="Cancelled"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/VisitSheetOpenedCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/VisitSheetNotStartedCB"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+
+            android:text="Opened"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/VisitSheetInProgressCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/VisitSheetDefferdCB"
+            android:layout_toRightOf="@+id/VisitSheetOpenedCB"
+            android:checked="false"
+
+            android:onClick="checkboxfilter"
+            android:text="In Progress"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/VisitSheetCompletedCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/VisitSheetDefferdCB"
+            android:layout_toRightOf="@+id/VisitSheetInProgressCB"
+            android:checked="false"
+
+            android:onClick="checkboxfilter"
+            android:text="Finished"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/spinner_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/check_box_cont"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:id="@+id/spinner_cont_1"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/white">
+
+            <Spinner
+                android:id="@+id/VisitSheetTechnicalSp"
+                style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinner_cont_2"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/spinner_cont_1"
+            android:background="@color/white">
+
+            <Spinner
+                android:id="@+id/VisitSheetReordsDateSp"
+                style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/VisitSheetSearchIV"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/spinner_cont"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/sign_in_b"
+        android:text="Search"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/VisitSheetSearchIV"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tb1_allexisting_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+</RelativeLayout>

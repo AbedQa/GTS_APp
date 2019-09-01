@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controllers.Activities.Login"
+    android:background="@drawable/main_bg">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            app:srcCompat="@drawable/main_logo" />
+        <RelativeLayout
+            android:id="@+id/spinner_cont"
+            android:layout_below="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <Spinner
+                style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                android:id="@+id/LoginCompanySp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/LoginUserNameET"
+            android:layout_below="@+id/spinner_cont"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edt_bg"
+            android:hint="User Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/LoginPasswordET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edt_bg"
+            android:layout_below="@+id/LoginUserNameET"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:textStyle="bold"
+
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+
+        <Button
+            android:id="@+id/LoginConnectBtn"
+            android:layout_below="@+id/LoginPasswordET"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/sign_in_b"
+            android:text="LOGIN"
+            android:textColor="@color/white" />
+
+
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
