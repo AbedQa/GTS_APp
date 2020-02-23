@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/NotesActivity_NoteTypeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/NotesActivity_NoteTextEt"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/NoteActivityPerforemedTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Done"
+            android:textColor="#000" />
+
+    </TableRow>
+
+</LinearLayout>

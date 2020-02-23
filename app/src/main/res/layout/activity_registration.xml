@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controllers.Activities.Registration"
+    android:background="@drawable/main_bg"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="199dp"
+            android:layout_height="172dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/main_logo" />
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imageView">
+            <RelativeLayout
+                android:id="@+id/RegistrationCompanySp_cont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <Spinner
+                    android:id="@+id/RegistrationCompanySp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RegistrationEstaplishmentSp_cont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_below="@+id/RegistrationCompanySp_cont"
+                android:layout_marginTop="30dp">
+                <Spinner
+                    android:id="@+id/RegistrationEstaplishmentSp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/RegistrationNameET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/RegistrationEstaplishmentSp_cont"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/edt_bg"
+                android:textColor="@color/white"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:layout_below="@+id/RegistrationNameET"
+                android:id="@+id/RegistrationRegBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/sign_in_b"
+                android:text="Register"
+                android:textSize="20dp"
+                android:layout_marginTop="70dp"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

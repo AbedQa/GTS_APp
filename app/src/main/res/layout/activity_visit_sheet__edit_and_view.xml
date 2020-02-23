@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/splash_bg"
+    android:orientation="vertical"
+    tools:context=".Controllers.Activities.VisitSheet_EditAndView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/top_banner"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/top_banner">
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/three_lines_menu" />
+
+                <TextView
+                    android:id="@+id/visit_sheet_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="VISIT SHEET DETAILS"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/addSpearpart"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/ic_add_circle_outline_black_24dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mid_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/menu_1"
+                android:layout_below="@id/top_banner">
+
+                <TabHost
+                    android:id="@+id/Visitsheet_EditAndView_Tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/top_banner" />
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:id="@+id/General"
+                                android:layout_width="match_parent"
+                                android:layout_height="297dp">
+
+                                <RelativeLayout
+                                    android:id="@+id/btns_cont"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/VS_E_A_V_TravelTimeBtn"
+                                        android:layout_width="104dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="#FF001D3B"
+                                        android:text="TravelTime"
+                                        android:textColor="#fff"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/VS_E_A_V_TravelTimeTV"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="13dp"
+                                        android:layout_toRightOf="@+id/VS_E_A_V_TravelTimeBtn"
+                                        android:textColor="@color/white"
+                                        android:textSize="16dp"
+                                        android:textStyle="italic" />
+
+                                    <Button
+                                        android:id="@+id/VS_E_A_V_StartTimeBtn"
+                                        android:layout_width="104dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_toRightOf="@+id/VS_E_A_V_TravelTimeTV"
+                                        android:background="#FF001D3B"
+                                        android:text="Start Time"
+                                        android:textColor="#fff"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/VS_E_A_V_StartTimeTV"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="13dp"
+                                        android:layout_toRightOf="@+id/VS_E_A_V_StartTimeBtn"
+                                        android:textColor="@color/white"
+                                        android:textSize="16dp"
+                                        android:textStyle="italic" />
+
+                                    <Button
+                                        android:id="@+id/VS_E_A_V_EndTimeBtn"
+                                        android:layout_width="104dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_toRightOf="@+id/VS_E_A_V_StartTimeTV"
+                                        android:background="#FF001D3B"
+                                        android:text="End Time"
+                                        android:textColor="#fff"
+                                        android:textSize="16dp"
+                                        android:textStyle="italic" />
+
+                                    <TextView
+                                        android:id="@+id/VS_E_A_V_EndTimeTV"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="13dp"
+                                        android:layout_toRightOf="@+id/VS_E_A_V_EndTimeBtn"
+                                        android:textColor="@color/white"
+                                        android:textSize="16dp"
+                                        android:textStyle="italic" />
+
+
+                                </RelativeLayout>
+
+                                <ScrollView
+                                    android:id="@+id/general_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/btns_cont">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp">
+
+                                            <TextView
+
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Numbering"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_NumberingTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Item Name"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_ItemNameTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+
+                                            <TextView
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Customer"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_CustomerTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+
+                                            <TextView
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Serial No"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_SerialNoTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+
+                                            <TextView
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Contact Person"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_ContactPersonTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+
+                                            <TextView
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Meter Reading"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <EditText
+                                                android:id="@+id/VS_E_A_V_MeterReadingTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:focusedByDefault="false"
+                                                android:textStyle="bold" />
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Address"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_AdressTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+
+                                            <TextView
+
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Visit Type"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_VisitTypeTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Visit Date"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_VisitDateTV"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Status"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <Spinner
+                                                android:id="@+id/VS_E_A_V_StatusSp"
+                                                android:layout_width="220dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp" />
+
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="20dp">
+
+                                            <TextView
+                                                android:layout_width="75dp"
+                                                android:layout_height="wrap_content"
+                                                android:text="Technical:"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/VS_E_A_V_TechnicalTV"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="20dp">
+
+                                            <TextView
+                                                android:layout_width="107dp"
+                                                android:layout_height="wrap_content"
+                                                android:text="Remarks:"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                            <EditText
+                                                android:id="@+id/VS_E_A_V_RemarksET"
+                                                android:layout_width="664dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:ems="10"
+                                                android:hint="Remarks"
+                                                android:inputType="textPersonName"
+                                                android:textColor="#fff"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="10dp">
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+
+                                                <RelativeLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_centerHorizontal="true"
+                                                    android:layout_centerVertical="true">
+
+                                                    <CheckBox
+                                                        android:id="@+id/VS_E_A_V_ContractCB"
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Contract" />
+
+                                                    <CheckBox
+                                                        android:id="@+id/VS_E_A_V_CopyToDeliveryCB"
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="10dp"
+                                                        android:layout_toRightOf="@+id/VS_E_A_V_ContractCB"
+                                                        android:text="Copy To Delivery" />
+
+
+                                                    <CheckBox
+                                                        android:id="@+id/VS_E_A_V_CopyToSalesInvoiceCB"
+                                                        android:layout_width="250dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_below="@+id/VS_E_A_V_ContractCB"
+                                                        android:layout_alignParentStart="true"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:layout_marginStart="0dp"
+                                                        android:layout_marginLeft="0dp"
+                                                        android:text="Copy To Sales Invoice" />
+
+
+                                                </RelativeLayout>
+
+                                            </RelativeLayout>
+
+                                        </TableRow>
+                                    </LinearLayout>
+                                </ScrollView>
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/Personal_Activity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+                                <ListView
+                                    android:id="@+id/Personal_Activity_list"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/Spare_Parts"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <HorizontalScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TableLayout
+                                            android:id="@+id/EditAndViewtb1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"></TableLayout>
+                                    </HorizontalScrollView>
+
+                                </ScrollView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/logitics"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="20dp">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Owner"
+                                        android:textColor="#000"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+
+                                    <TextView
+                                        android:id="@+id/VS_E_A_V_LogisticsOwner"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:textColor="#000"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="20dp">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Address"
+                                        android:textColor="#000"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+
+                                    <TextView
+                                        android:id="@+id/VS_E_A_V_LogisticsAddressTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:textColor="#000"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="20dp">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Contact Person"
+                                        android:textColor="#000"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+
+                                    <TextView
+                                        android:id="@+id/VS_E_A_V_LogisticsContactPersonTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:textColor="#000"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="20dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Assigned Section"
+                                        android:textColor="#000"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+
+                                    <TextView
+                                        android:id="@+id/VS_E_A_V_LogisticAssignSecTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:textColor="#000"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+                                </TableRow>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/Attachments"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/VS_E_A_V_UploadFileBtn"
+                                    android:layout_width="200dp"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@drawable/sign_in_b"
+                                    android:text="Upload File"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/image_path_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/white" />
+
+                                <ImageView
+                                    android:id="@+id/image_place_holder"
+                                    android:layout_width="300dp"
+                                    android:layout_height="300dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="30dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/Notes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ListView
+                                    android:id="@+id/Notes_List"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/Total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:id="@+id/currency_cont"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp">
+
+                                        <TextView
+                                            android:id="@+id/currency_text"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="Currency:"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/VS_E_A_V_CurrencyTV"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_toRightOf="@+id/currency_text"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/total_lines_cont"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/currency_cont">
+
+                                        <TextView
+                                            android:id="@+id/total_lines_text"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="Total Lines:"
+                                            android:textColor="#000"
+                                            android:textSize="16dp"
+                                            android:textStyle="italic" />
+
+                                        <TextView
+                                            android:id="@+id/VS_E_A_V_TotalLinesTV"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_toRightOf="@+id/total_lines_text"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+                                    <!--<RelativeLayout-->
+                                    <!--android:id="@+id/amount_cont"-->
+                                    <!---->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_below="@+id/total_lines_cont">-->
+
+                                    <!--<TextView-->
+                                    <!--android:id="@+id/amount_text"-->
+                                    <!--android:layout_width="150dp"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_marginLeft="20dp"-->
+                                    <!--android:text="Amount:"-->
+                                    <!--android:textColor="#000"-->
+                                    <!--android:textSize="16dp"-->
+                                    <!--android:textStyle="italic" />-->
+
+                                    <!--<TextView-->
+                                    <!--android:id="@+id/VS_E_A_V_AmountTV"-->
+                                    <!--android:layout_width="150dp"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_marginLeft="20dp"-->
+                                    <!--android:layout_toRightOf="@+id/amount_text"-->
+                                    <!--android:textColor="#000"-->
+                                    <!--android:textSize="16dp"-->
+                                    <!--android:textStyle="italic" />-->
+
+                                    <!--</RelativeLayout>-->
+
+                                    <RelativeLayout
+                                        android:id="@+id/discount_cont"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/total_lines_cont">
+
+                                        <TextView
+                                            android:id="@+id/discount_text"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="Discount%:"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/VS_E_A_V_DiscountTV"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_toRightOf="@+id/discount_text"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/total_tax_cont"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/discount_cont">
+
+                                        <TextView
+                                            android:id="@+id/total_tax_text"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="Total Tax:"
+                                            android:textColor="#000"
+                                            android:textSize="16dp"
+                                            android:textStyle="italic" />
+
+                                        <TextView
+                                            android:id="@+id/VS_E_A_V_TotalTaxTV"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_toRightOf="@+id/total_tax_text"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/gross_total_cont"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/total_tax_cont">
+
+                                        <TextView
+                                            android:id="@+id/gross_total_text"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="Gross Total (FC):"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/VS_E_A_V_GrossTotalfCTV"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_toRightOf="@+id/gross_total_text"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/gross_total_lc_cont"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/gross_total_cont">
+
+                                        <TextView
+                                            android:id="@+id/gross_total_lc_text"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="Gross Total (LC):"
+                                            android:textColor="#000"
+                                            android:textSize="16dp"
+                                            android:textStyle="italic" />
+
+                                        <TextView
+                                            android:id="@+id/VS_E_A_V_GrossTotalLCTV"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_toRightOf="@+id/gross_total_lc_text"
+                                            android:textColor="#fff"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </TabHost>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menu_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#2B3848">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true">
+
+                    <Button
+                        android:id="@+id/VS_E_A_V_SaveIV"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sign_in_b"
+                        android:clickable="true"
+                        android:text="Save"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/VS_E_A_V_PostToDeliveryIV"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/VS_E_A_V_SaveIV"
+                        android:background="@drawable/sign_in_b"
+                        android:clickable="true"
+                        android:text="Delivery"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/VS_E_A_V_SaveandFinishIV"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/VS_E_A_V_PostToDeliveryIV"
+                        android:background="@drawable/sign_in_b"
+                        android:clickable="true"
+                        android:text="Save And Finish"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/VS_E_A_V_CloseIV"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/VS_E_A_V_SaveandFinishIV"
+                        android:background="@drawable/sign_in_b"
+                        android:clickable="true"
+                        android:text="Close"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

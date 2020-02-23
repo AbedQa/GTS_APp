@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="3dp"
+        android:id="@+id/check_box_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <CheckBox
+            android:id="@+id/VisitSheetNotStartedCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="checkboxfilter"
+            android:text="Not Started"
+            android:textSize="18dp"
+
+            android:textColor="@color/white"/>
+
+        <CheckBox
+            android:id="@+id/VisitSheetDefferdCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+            android:text="Deferred"
+            android:textSize="18dp"
+
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/VisitSheetNotStartedCB"/>
+
+        <CheckBox
+            android:id="@+id/VisitSheetWaitingForDeliverCB"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+            android:text="Waiting For Deliver"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/VisitSheetDefferdCB"/>
+
+        <CheckBox
+            android:id="@+id/VisitSheetCancelledCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+            android:text="Cancelled"
+            android:textSize="18dp"
+
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/VisitSheetWaitingForDeliverCB"/>
+
+        <CheckBox
+            android:id="@+id/VisitSheetOpenedCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+            android:text="Opened"
+            android:textSize="18dp"
+
+            android:textColor="@color/white"
+            android:layout_below="@+id/VisitSheetNotStartedCB" />
+
+        <CheckBox
+            android:id="@+id/VisitSheetInProgressCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+            android:text="In Progress"
+            android:textSize="18dp"
+
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/VisitSheetOpenedCB"
+            android:layout_below="@+id/VisitSheetDefferdCB"/>
+
+        <CheckBox
+            android:id="@+id/VisitSheetCompletedCB"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+            android:text="Finished"
+            android:textSize="18dp"
+
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/VisitSheetInProgressCB"
+            android:layout_below="@+id/VisitSheetDefferdCB"/>
+        <CheckBox
+            android:id="@+id/Visitsheet_incloud"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:onClick="checkboxfilter"
+            android:text="Include contract"
+            android:textSize="15dp"
+            android:textColor="@color/colorAccent"
+            android:layout_below="@+id/VisitSheetDefferdCB"
+            android:layout_toRightOf="@+id/VisitSheetCompletedCB"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/spinner_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/check_box_cont"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:id="@+id/spinner_cont_1"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/white">
+
+            <Spinner
+                android:id="@+id/VisitSheetTechnicalSp"
+                style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spinner_cont_2"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/spinner_cont_1"
+            android:background="@color/white">
+
+            <Spinner
+                android:id="@+id/VisitSheetReordsDateSp"
+                style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_cont"
+        android:layout_below="@+id/spinner_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/VisitSheetFromDateET"
+            android:layout_width="240dp"
+            android:layout_height="35dp"
+            android:textSize="20dp"
+            android:hint="From Date"
+            android:inputType="date"
+            android:textAlignment="center"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/VisitSheetToDateET"
+            android:layout_width="240dp"
+            android:layout_height="35dp"
+            android:textSize="20dp"
+            android:ems="10"
+            android:hint="To Date"
+            android:inputType="date"
+            android:textAlignment="center"
+             android:gravity="center"
+            android:background="@color/white"
+            android:textStyle="italic"
+            android:layout_toRightOf="@+id/VisitSheetFromDateET"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/VisitSheetSearchIV"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/date_cont"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sign_in_b"
+        android:text="Search"
+        android:textColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/VisitSheetSearchIV"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tb1_allexisting_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+</RelativeLayout>
