@@ -235,7 +235,7 @@ public class AddSpareParts extends AppCompatActivity implements SparePartsAdapte
         //looping through existing elements
         for (ItemSpareParts s : itemSparePartsList) {
             //if the existing elements contains the search input
-            if (s.getName().toLowerCase().contains(text.toLowerCase()) || s.getId().toLowerCase().contains(text.toLowerCase())) {
+            if (s.getName().toLowerCase().contains(text.toLowerCase()) || s.getNum().toLowerCase().contains(text.toLowerCase())) {
                 //adding the element to filtered list
                 filterdNames.add(s);
             }
